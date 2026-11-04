@@ -1,0 +1,26 @@
+{
+  "repository": "https://github.com/gugeldev/exercicios-bd-ptbr",
+  "commit": "6bb9118e46cf8d0ee98b42e0285bae5036d04a19",
+  "file": "exercises/exercises-ptbr-full-translation.json",
+  "sha256": "30f0c4eddd722c89c97880f3a0c00a359924352c793125fd81f697ffcaf170ac",
+  "records": 873,
+  "license": "CC0-1.0",
+  "upstream": "https://github.com/yuhonas/free-exercise-db",
+  "retrieved": "2026-10-27",
+  "quality": {
+    "missingInstructions": [
+      "Iron_Cross",
+      "One-Arm_Kettlebell_Swings",
+      "Push_Press",
+      "Side_Bridge",
+      "Side_Jackknife"
+    ],
+    "forceNormalized": {
+      "push": "empurrar",
+      "pull": "puxar",
+      "static": "estatico"
+    },
+    "mediaType": "photographs",
+    "mediaFiles": 1746
+  }
+}

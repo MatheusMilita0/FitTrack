@@ -1,0 +1,45 @@
+REGISTRO HISTÓRICO DA ENTREGA ORIGINAL. O estado atual, as correções e os testes estão em CONFORMIDADE_TG_REVISADO.md e VALIDACAO.md. As quantidades e pendências abaixo referem-se à versão anterior.
+
+O FitTrack está salvo em FitTrack com a aplicação ligada a uma API preparada para PostgreSQL online. As telas de contas, treinos, nutrição, histórico e chat passaram a usar dados da API em vez dos dados demonstrativos.
+
+schema.sql: criação inicial das 11 tabelas PostgreSQL.
+RELACIONAMENTOS.md: tabela de relacionamentos, diagrama ER e dicionário de dados.
+README.md: configuração e comandos para executar o projeto.
+Validação: 78 testes passaram; o build passou; a tela de login carregou no navegador. O banco online ainda não foi criado nem conectado, portanto não houve teste contra uma instância real. Para concluir essa etapa, crie um PostgreSQL online vazio, configure a URL apenas no .env local conforme .env.example e siga a migração descrita no README.md. Não execute o SQL em um banco existente sem revisar o impacto.
+
+Vídeo e recuperação de senha por e-mail permanecem indisponíveis, como combinado. O registro mecânico do braço não foi gerado pelo harness; por isso, a conferência com Conferir-Entrega.ps1 não pôde ser executada.
+
+ara o projeto de faculdade, o caminho mais simples é criar um PostgreSQL gerenciado no Neon:
+
+Crie uma conta e selecione New project.
+Dê um nome ao projeto, como fittrack, escolha uma região próxima e crie o banco.
+========================
+**Fiz essa parte e apareceu para jogar no copiloto do agente de I.A - Set up this Neon project in the current working directory.
+
+1. `npm i -g neon@latest && neon login`
+2. `neon skills -y`
+3. `neon mcp -y`
+4. `neon link --project-id mute-voice-09394924 --branch production -y`
+5. `neon config init`
+6. Update `neon.ts`:
+
+```ts
+import { defineConfig } from "@neon/config/v1";
+
+export default defineConfig({});
+```
+
+7. `neon deploy`**
+========================
+No painel Connect, copie a connection string PostgreSQL. Não envie essa URL pelo chat: ela contém a senha do banco.
+Em FitTrack, copie .env.example para um arquivo .env e preencha DATABASE_URL com a URL copiada. Preencha também ADMIN_EMAIL, ADMIN_PASSWORD e ADMIN_CPF com dados seus, sem usar valores de exemplo.
+
+============================
+Fiz até aqui
+============================
+
+No terminal do VS Code, dentro da pasta do projeto, execute:
+npm run migrate
+npm run bootstrap:admin
+
+Faça isso somente no banco novo e vazio. Depois, siga os dois terminais de desenvolvimento descritos no README.md. O banco estará online, mas a aplicação continuará rodando no seu computador; publicar o site e a API na internet é uma etapa separada.

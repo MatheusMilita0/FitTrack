@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/brolesi/taco",
+  "commit": "b800c910dfc9d2e8e6bab45dd42e5b8f5167b466",
+  "license": "MIT (repositório; fontes NEPA/UNICAMP e IBGE identificadas nos CSVs)",
+  "retrieved": "2026-10-27",
+  "files": {
+    "taco_composicao.csv": "7dee98c4562c4faecc713712d5ae9f909a2a43a8fa4f10c81d3d52fc5cad6058",
+    "taco_acidos_graxos.csv": "3a389408e2d3dc234035d862f2d3c8039b5d76304b0ad061143861c5ee5913bd",
+    "taco_aminoacidos.csv": "d396eaed98c9374e5452c3a240e8a3ddc2f03b87afbab29d7102e4c7a9e9be94",
+    "pof_medidas_caseiras.csv": "baf300288eb153d94592ff3818e87641feeb996da23b3b8ed99fd5e5e2e65ff8",
+    "catalogo-normalizado.json": "de4cdc149ab6bf83ee33cd6f4255f1d330d733f4a6173d3f8d422dcd242b5d4b"
+  }
+}
